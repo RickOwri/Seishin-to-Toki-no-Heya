@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://zokrates.github.io/gettingstarted.html -->
+<html lang="en" class="js sidebar-visible light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Book generated using mdBook -->
+        
+        <title>Getting Started - ZoKrates</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="rgba(0, 0, 0, 0)">
+
+        <link rel="shortcut icon" href="https://zokrates.github.io/favicon.png">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/variables.css">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/general.css">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/chrome.css">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/font-awesome.css">
+        <link href="./Getting Started - ZoKrates_files/css" rel="stylesheet" type="text/css">
+        <link href="./Getting Started - ZoKrates_files/css(1)" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/highlight.css">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/tomorrow-night.css" disabled="">
+        <link rel="stylesheet" href="./Getting Started - ZoKrates_files/ayu-highlight.css" disabled="">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents" aria-hidden="false">
+            <ol class="chapter"><li><a href="https://zokrates.github.io/introduction.html" tabindex="0"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="https://zokrates.github.io/gettingstarted.html" class="active" tabindex="0"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><a href="https://zokrates.github.io/language/index.html" tabindex="0"><strong aria-hidden="true">3.</strong> Language</a></li><li><ol class="section"><li><a href="https://zokrates.github.io/language/variables.html" tabindex="0"><strong aria-hidden="true">3.1.</strong> Variables</a></li><li><a href="https://zokrates.github.io/language/types.html" tabindex="0"><strong aria-hidden="true">3.2.</strong> Types</a></li><li><a href="https://zokrates.github.io/language/operators.html" tabindex="0"><strong aria-hidden="true">3.3.</strong> Operators</a></li><li><a href="https://zokrates.github.io/language/control_flow.html" tabindex="0"><strong aria-hidden="true">3.4.</strong> Control flow</a></li><li><a href="https://zokrates.github.io/language/constants.html" tabindex="0"><strong aria-hidden="true">3.5.</strong> Constants</a></li><li><a href="https://zokrates.github.io/language/functions.html" tabindex="0"><strong aria-hidden="true">3.6.</strong> Functions</a></li><li><a href="https://zokrates.github.io/language/generics.html" tabindex="0"><strong aria-hidden="true">3.7.</strong> Generics</a></li><li><a href="https://zokrates.github.io/language/imports.html" tabindex="0"><strong aria-hidden="true">3.8.</strong> Imports</a></li><li><a href="https://zokrates.github.io/language/comments.html" tabindex="0"><strong aria-hidden="true">3.9.</strong> Comments</a></li><li><a href="https://zokrates.github.io/language/macros.html" tabindex="0"><strong aria-hidden="true">3.10.</strong> Macros</a></li><li><a href="https://zokrates.github.io/language/logging.html" tabindex="0"><strong aria-hidden="true">3.11.</strong> Logging</a></li><li><a href="https://zokrates.github.io/language/assembly.html" tabindex="0"><strong aria-hidden="true">3.12.</strong> Assembly</a></li></ol></li><li><a href="https://zokrates.github.io/toolbox/index.html" tabindex="0"><strong aria-hidden="true">4.</strong> Toolbox</a></li><li><ol class="section"><li><a href="https://zokrates.github.io/toolbox/cli.html" tabindex="0"><strong aria-hidden="true">4.1.</strong> CLI</a></li><li><a href="https://zokrates.github.io/toolbox/trusted_setup.html" tabindex="0"><strong aria-hidden="true">4.2.</strong> Trusted Setup</a></li><li><a href="https://zokrates.github.io/toolbox/stdlib.html" tabindex="0"><strong aria-hidden="true">4.3.</strong> Standard Library</a></li><li><a href="https://zokrates.github.io/toolbox/proving_schemes.html" tabindex="0"><strong aria-hidden="true">4.4.</strong> Proving schemes</a></li><li><a href="https://zokrates.github.io/toolbox/verification.html" tabindex="0"><strong aria-hidden="true">4.5.</strong> Verification</a></li><li><a href="https://zokrates.github.io/toolbox/ir.html" tabindex="0"><strong aria-hidden="true">4.6.</strong> ZIR</a></li><li><a href="https://zokrates.github.io/toolbox/abi.html" tabindex="0"><strong aria-hidden="true">4.7.</strong> JSON ABI</a></li><li><a href="https://zokrates.github.io/toolbox/zokrates_js.html" tabindex="0"><strong aria-hidden="true">4.8.</strong> zokrates.js</a></li><li><a href="https://zokrates.github.io/toolbox/experimental.html" tabindex="0"><strong aria-hidden="true">4.9.</strong> Experimental</a></li></ol></li><li><a href="https://zokrates.github.io/examples/index.html" tabindex="0"><strong aria-hidden="true">5.</strong> Examples</a></li><li><ol class="section"><li><a href="https://zokrates.github.io/examples/rng_tutorial.html" tabindex="0"><strong aria-hidden="true">5.1.</strong> A SNARK Powered RNG</a></li><li><a href="https://zokrates.github.io/examples/sha256example.html" tabindex="0"><strong aria-hidden="true">5.2.</strong> Proving knowledge of a hash preimage</a></li><li><a href="https://zokrates.github.io/examples/magic_square.html" tabindex="0"><strong aria-hidden="true">5.3.</strong> A ZK Magic Square in the browser</a></li></ol></li><li><a href="https://zokrates.github.io/testing.html" tabindex="0"><strong aria-hidden="true">6.</strong> Testing</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar" aria-expanded="true">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">ZoKrates</h1> 
+
+                        <div class="right-buttons">
+                            <a href="https://zokrates.github.io/print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="https://zokrates.github.io/gettingstarted.html#getting-started" id="getting-started"><h1>Getting Started</h1></a>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#installation" id="installation"><h2>Installation</h2></a>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#online-ides" id="online-ides"><h3>Online IDEs</h3></a>
+<p>To get a feel of the language, try the <a href="https://play.zokrat.es/">ZoKrates playgound</a>.</p>
+<p>To experiment with creating SNARKs and verifying them in the EVM, check out the ZoKrates plugin in the <a href="https://remix.ethereum.org/">Remix online IDE</a>.</p>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#one-line-installation" id="one-line-installation"><h3>One-line installation</h3></a>
+<p>We provide one-line installation for Linux, MacOS and FreeBSD:</p>
+<pre><div class="buttons"><button class="fa fa-copy clip-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="tooltiptext"></i></button></div><code class="language-bash hljs">curl -LSfs get.zokrat.es | sh
+</code></pre>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#from-source" id="from-source"><h3>From source</h3></a>
+<p>You can build ZoKrates from <a href="https://github.com/ZoKrates/ZoKrates/">source</a> with the following commands:</p>
+<pre><div class="buttons"><button class="fa fa-copy clip-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="tooltiptext"></i></button></div><code class="language-bash hljs">git <span class="hljs-built_in">clone</span> https://github.com/ZoKrates/ZoKrates
+<span class="hljs-built_in">cd</span> ZoKrates
+<span class="hljs-built_in">export</span> ZOKRATES_STDLIB=<span class="hljs-variable">$PWD</span>/zokrates_stdlib/stdlib
+cargo build -p zokrates_cli --release
+<span class="hljs-built_in">cd</span> target/release
+</code></pre>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#docker" id="docker"><h3>Docker</h3></a>
+<p>ZoKrates is available on Dockerhub.</p>
+<pre><div class="buttons"><button class="fa fa-copy clip-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="tooltiptext"></i></button></div><code class="language-bash hljs">docker run -ti zokrates/zokrates /bin/bash
+</code></pre>
+<p>From there on, you can use the <code class="hljs">zokrates</code> CLI.</p>
+<a class="header" href="https://zokrates.github.io/gettingstarted.html#hello-zokrates" id="hello-zokrates"><h2>Hello ZoKrates!</h2></a>
+<p>First, create the text-file <code class="hljs">root.zok</code> and implement your program. In this example, we will prove knowledge of the square root <code class="hljs">a</code> of a number <code class="hljs">b</code>:</p>
+<pre><div class="buttons"><button class="fa fa-copy clip-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="tooltiptext"></i></button></div><code class="language-zokrates hljs">def main(private field a, field b) {
+    assert(a * a == b);
+    return;
+}
+
+</code></pre>
+<p>Some observations:</p>
+<ul>
+<li>The keyword <code class="hljs">field</code> is the basic type we use, which is an element of a given prime field.</li>
+<li>The keyword <code class="hljs">private</code> signals that we do not want to reveal this input, but still prove that we know its value.</li>
+</ul>
+<p>Then run the different phases of the protocol:</p>
+<pre><div class="buttons"><button class="fa fa-copy clip-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="tooltiptext"></i></button></div><code class="language-bash hljs"><span class="hljs-comment"># compile</span>
+zokrates compile -i root.zok
+<span class="hljs-comment"># perform the setup phase</span>
+zokrates setup
+<span class="hljs-comment"># execute the program</span>
+zokrates compute-witness -a 337 113569
+<span class="hljs-comment"># generate a proof of computation</span>
+zokrates generate-proof
+<span class="hljs-comment"># export a solidity verifier</span>
+zokrates <span class="hljs-built_in">export</span>-verifier
+<span class="hljs-comment"># or verify natively</span>
+zokrates verify
+</code></pre>
+<p>The CLI commands are explained in more detail in the <a href="https://zokrates.github.io/toolbox/cli.html">CLI reference</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="https://zokrates.github.io/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="https://zokrates.github.io/language/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="https://zokrates.github.io/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="https://zokrates.github.io/language/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="./Getting Started - ZoKrates_files/elasticlunr.min.js.download" type="text/javascript" charset="utf-8"></script>
+        <script src="./Getting Started - ZoKrates_files/mark.min.js.download" type="text/javascript" charset="utf-8"></script>
+        <script src="./Getting Started - ZoKrates_files/searcher.js.download" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="./Getting Started - ZoKrates_files/clipboard.min.js.download" type="text/javascript" charset="utf-8"></script>
+        <script src="./Getting Started - ZoKrates_files/highlight.js.download" type="text/javascript" charset="utf-8"></script>
+        <script src="./Getting Started - ZoKrates_files/book.js.download" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    
+
+</body></html>
