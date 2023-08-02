@@ -7,11 +7,20 @@
 
 Client diversity is important for Ethereum to ensure the robustness and security of the network. Ethereum clients implement the Ethereum protocol, allowing nodes to join the network, process transactions, and maintain the blockchain. Client diversity means having multiple implementations of the Ethereum protocol (like Geth, OpenEthereum, Besu, etc.) in different programming languages. 
 
-This diversity is critical for several reasons. First, it reduces the risk of network-wide failures due to bugs in a single client. If there's a bug in one client, nodes running different clients can continue operating and maintaining the network. Second, it can prevent centralization around a single client, preserving Ethereum's decentralized nature. Lastly, it encourages innovation, as different client teams might propose different solutions for enhancing Ethereum's performance and functionality.
+This diversity is critical for several reasons. First, it reduces the risk of network-wide failures due to bugs in a single client. If there's a bug in one client, nodes running different clients can continue operating and maintaining the network **resilience**. Second, it can prevent centralization around a single client, preserving Ethereum's decentralized nature. Lastly, it encourages innovation, as different client teams might propose different solutions for enhancing Ethereum's performance and functionality.**decentralization**
 
+```
+Corrections : 
+Decentralisation and resilience
+```
 2. **Where is the full Ethereum state held?**
 
 The full Ethereum state is held in each full node on the Ethereum network. The Ethereum state represents the current information of all accounts in the system, including both externally owned accounts (normal addresses) and contract accounts. Each full node maintains a version of this state, and it's updated with every block according to the block's transactions.
+
+```
+Correction :
+In the client software on an archive node
+```
 
 3. **What is a replay attack? Which 2 pieces of information can prevent it?**
 
@@ -19,12 +28,22 @@ A replay attack happens when a valid data transmission is maliciously or fraudul
 
 To prevent replay attacks, Ethereum introduced two pieces of information into each transaction: chainID and replay protection. ChainID was introduced during the Ethereum and Ethereum Classic fork. Each network has a unique chainID, and transactions from one chain are considered invalid on the other. This measure helps to prevent replay attacks between chains. The other piece of information, replay protection, uses increasing nonce values for each transaction from an address. Transactions with lower nonce values are considered invalid and are rejected by the network.
 
+```
+Correction :
+a. Where a previously accepted transaction is re submitted to the network
+b. The chain ID and the nonce
+```
+
 4. **In a contract, how do we know who called a view function?**
 
 In Solidity, the keyword `msg.sender` is used within a function to access the address of the entity (externally owned account or another contract) that called the function. However, for `view` functions which do not modify the state and are often used to read data, it's important to note that when they are called off-chain (like from a web3.js script, not part of a transaction), `msg.sender` would be meaningless since there's no real sender of the call. In these cases, it would return the zero address. 
 
 But if a `view` function is called within the execution of a transaction (i.e., it's called by another function that is part of a transaction), `msg.sender` would correctly return the address of the account that initiated the transaction or the contract that made the call.
 
+```
+Correction :
+Although msg.sender may have the address we cannot rely on this.
+```
 ---
 
 # Homeworks 2

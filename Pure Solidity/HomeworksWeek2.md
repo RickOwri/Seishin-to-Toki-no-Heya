@@ -1,6 +1,7 @@
-# Q1
+# Homework 6
+## Q1
 
-# Q2
+## Q2
 push9, push 9 bytes items (0x601e8060093d393df3)
 msize, Get the size of active memory in bytes
 mstore, Save word to memory
