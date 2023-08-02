@@ -1,3 +1,4 @@
+# Homework 5
 # Homework 6
 ## Q1
 
@@ -7,3 +8,5 @@ msize, Get the size of active memory in bytes
 mstore, Save word to memory
 codesize,
 returndatasize, Get size of code running in current environment
+
+# Homework 7
