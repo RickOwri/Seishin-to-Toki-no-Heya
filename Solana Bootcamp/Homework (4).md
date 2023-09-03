@@ -17,3 +17,4 @@ screen shot of your team's highest score on Discord.
     3. If the count is divisible by 5 print "buzz"
     4. If the count is divisible by 3 and 5 print "fizz buzz"
     5. At the end print the number of times "fizz buzz" occurred
+    
