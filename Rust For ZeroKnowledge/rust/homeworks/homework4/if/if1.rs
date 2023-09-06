@@ -1,6 +1,5 @@
 // if1.rs
 
-// I AM NOT DONE
 
 pub fn bigger(a: i32, b: i32) -> i32 {
     // Complete this function to return the bigger number!
@@ -11,10 +10,12 @@ pub fn bigger(a: i32, b: i32) -> i32 {
 
     if a > b {
         println!("bigger is {}", a);
+        a
     }
 
-    else a < b {
+    else {
         println!("bigger is {}", b);
+        b
     }
 
     
