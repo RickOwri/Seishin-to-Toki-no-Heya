@@ -10,4 +10,19 @@
 // * Use an if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+const X:bool = true;
+const Y:bool = false;
+
+fn hello_goodbye(a: bool) {
+    if a == true {
+        println!("hello");   
+    }
+    if a == false {
+        println!("goodbye");    
+    }
+}
+
+fn main() {
+    hello_goodbye(X);
+    hello_goodbye(Y);
+}

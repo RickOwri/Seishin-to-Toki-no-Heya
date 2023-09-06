@@ -1,0 +1,1 @@
+/mnt/c/Users/micka/Desktop/ReactAPP/Seishin-to-Toki-no-Heya/Rust\ Self\ Learning/hello/target/debug/hello: /mnt/c/Users/micka/Desktop/ReactAPP/Seishin-to-Toki-no-Heya/Rust\ Self\ Learning/hello/src/main.rs

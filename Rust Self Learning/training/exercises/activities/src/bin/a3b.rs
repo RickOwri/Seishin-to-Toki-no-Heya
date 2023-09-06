@@ -9,4 +9,20 @@
 // * Use an if..else if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+const TO_TEST:u8 = 12;
+
+fn comparator(a:u8) {
+    if a == 5 {
+        println!("== 5");
+    }
+    else if a > 5 {
+        println!(">5");
+    }
+    else if a < 5 {
+        println!("<5");
+    }
+} 
+
+fn main() {
+    comparator(2)
+}
